@@ -1,0 +1,47 @@
+PRAKTIKUM STRUKTUR DATA SEMESTER GASAL 2022/2023
+Pertemuan 03 (11 - 17 September 2022)
+MODUL ADT STACK
+
+PETUNJUK UNTUK PRAKTIKAN :
+1. Kerjakan sendiri tugas praktikum untuk berlatih. Kompetensi memprogram Anda dipertanggungjawabkan di dunia kerja nanti.
+2. Bila ada tugas kelompok, kerjakan dan tuliskan porsi Anda.
+3. Tuliskan deskripsi program/modul, nama/NIM pembuat, dan tanggal pembuatan di setiap file
+4. Jadwal praktikum terbatas 2 jam, Anda harus menambah lagi praktikum mandiri minimal 120 menit.
+5. Konsultasikan dengan asisten bila menemui kendala.
+
+AGENDA :
+1. Asisten mendemonstrasikan cara:
+   a. membuat projek program C standar (ANSI).
+   b. membuat folder kerja dengan format khusus.
+   c. membuat file header "*.h".
+   d. memprogram dengan PINTAR di file body "*.c" 
+   e. menyimpan dan mengkompilasi modul.
+   f. membuat file driver "m*.c" dan pembangunan projek.
+   g. eksekusi dan penirkutuan program.
+2. Praktikan mengunduh file tugas dari http://tiny.cc/sd23prak
+3. Praktikan mengerjakan tugas praktikum.
+4. Asisten mendampingi praktikan yang terkendala.
+5. Praktikan mengumpulkan laporan penyelesaian tugas.
+6. Asisten melaporkan kendala dan perkembangan praktikan.
+
+DESKRIPSI TUGAS P03 :
+1. Buatlah projek dan folder kerja hari ini dengan format : <nim>_SD04. contoh: 24060119110023_SD04.
+
+2. Simpanlah file HEADER (tstack.h), file BODY (tstack.c), dan file DRIVER (mtstack.c) ke dalam folder kerja.
+
+3. Pelajari file header, tambahkan keterangan program, #ifndef, #define, #endif kemudian lakukan kompilasi.
+
+4. Tambahkan deskripsi dan header (#include "tstack.h") pada awal file BODY maupun file DRIVER. 
+
+5. Salinlah prosedur/fungsi dari file HEADER ke file BODY. 
+
+6. Buatlah realisasi body fungsi/prosedur dalam file BODY, satu demi satu. Gantilah tanda ";" menjadi "{}", tambahkan komentar kamus lokal dan algoritma.
+
+7. Periksalah realisasi body, kemudian lakukan kompilasi/(re)build projek.
+
+8. Setiap selesai merealisasikan SEBUAH fungsi/prosedur, buatlah aplikasi pemanggilan fungsi/prosedur tersebut dalam file DRIVER kemudian uji (run) file DRIVER tersebut.
+
+9. Pada AKHIR SESI praktikum, laporkan hasil praktikum pada tautan berikut: 
+http://tiny.cc/sd23p
+
+10. Lanjutkan melengkapi fungsi/prosedur di luar sesi praktikum, kemudian setorkan file *.h dan *.c via Kulon.
