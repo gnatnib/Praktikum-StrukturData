@@ -128,21 +128,34 @@ void editX (Matriks *M, int X, int row, int col) {
 	{I.S.: M terdefinisi, X terdefinisi}
 	{F.S.: elemen M.cell berkurang 1}
 	{Proses: menghapus 1 elemen bernilai X dari M.cell*/
-void delX (Matriks *M, int X) {
-	// /Kamus Lokal/
-	int i, j;
+void delX (Matriks *M, int X){
 
-	// /Algoritma/
-	for (i=1; i<=10; i++) {
-		for (j=1; j<=10; j++) {
-			if ((*M).cell[i][j] == X) {
-				(*M).cell[i][j] = -999;
-				(*M).nbaris--;
-				(*M).nkolom--;
-				return;
-			}
-		}
-	}
+    int row;int col;
+    boolean rowbenar = 0, colbenar = 0;
+
+
+    searchX((*M),X,&row,&col);
+
+    if(row != -999 && col != -999){
+        (*M).cell[row][col] = -999;
+    }
+
+
+
+    for(int i = 1;i<=getNBaris(*M);i++){
+        for(int j = 1;j<=getNKolom(*M);j++){
+            if((*M).cell[i][j]!=-999 && (i>rowbenar)){
+                rowbenar = i;
+            }
+            if((*M).cell[i][j]!=-999 && (j>colbenar)){
+                colbenar = j;
+            }  
+        }
+    }
+
+    (*M).nbaris = rowbenar;
+    (*M).nkolom = colbenar;
+
 }
 
 /* procedure isiMatriksRandom(input/output M: Matriks, input x: integer, input y: integer)
