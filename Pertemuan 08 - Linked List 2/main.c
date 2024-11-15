@@ -48,6 +48,7 @@ int main()
   InsertVLast(&Z,'N');
   InsertVLast(&Z,'I');
   PrintList(Z);
+  
   printf("\nJumlah element dalam linked list Z: %d\n", NbElm(Z));
   printf("\nMencari X dalam list:\n");
   SearchX(Z, 'A', &A);

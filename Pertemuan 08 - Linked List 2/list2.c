@@ -77,7 +77,6 @@ void InsertVFirst (list2 *L, infotype V){
     if (P!=NIL){
         info(P) = V;
         if(IsEmptyList(*L)){
-            First(*L) = P;
             next(First(*L)) = NIL;
         }
         else{
