@@ -48,7 +48,7 @@ int NbElm (List1 L){
     return count;
 }
 
-void Alokasi (address *P){
+address Alokasi (address *P){
     //Kamus Lokal
 
     //Algoritma
@@ -60,6 +60,7 @@ void Dealokasi (address *P){
 
     //Algoritma
     free(*P);
+    (*P)=NIL;
 }
 
 void InsertVFirst (List1 *L, infotype V){

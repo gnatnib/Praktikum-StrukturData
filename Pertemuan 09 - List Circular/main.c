@@ -32,9 +32,10 @@ int main()
 
   printf("\nHapus elemen pertama dari linked list Z:\n");
   DeleteVFirst(&Z,&V);
+  PrintList(Z);
   printf("Hapus elemen terakhir dari linked list Z:\n");
   DeleteVLast(&Z,&V);
-  printf("\nList Z setelah dilakukan delete: \n");
+  printf("List Z setelah dilakukan delete: \n");
   PrintList(Z);
   printf("\nJumlah element dalam linked list Z: %d\n", NbElm(Z));
 
@@ -44,6 +45,9 @@ int main()
   InsertVLast(&Z, 'A');
   InsertVLast(&Z, 'K');
   InsertVLast(&Z, 'U');
+  PrintList(Z);
+  printf("\nDeleteX:");
+  DeleteX(&Z, 'J');
   PrintList(Z);
   printf("\nJumlah element dalam linked list Z: %d\n", NbElm(Z));
   printf("\nMencari X dalam list:\n");
@@ -57,7 +61,7 @@ int main()
   PrintList(Z);
 
   printf("\nMemasukkan elemen baru setelah elemen X dengan InsertVAfter.\n");
-  InsertVAfterX(&Z, 'U', 'L');
+  InsertVAfterX(&Z, 'A', 'L');
   PrintList(Z);
   printf("\nMemasukkan elemen baru sebelum elemen X dengan InsertVBefore.");
   InsertVBeforeX(&Z, 'L', 'N');

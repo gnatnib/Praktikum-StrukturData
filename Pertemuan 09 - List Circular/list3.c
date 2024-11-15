@@ -140,6 +140,29 @@ void DeleteVFirst (List3 *L, infotype *V){
 	}
 }
 
+// void DeleteVLast (List3 *L, infotype *V){
+// 	//Kamus Lokal
+// 	address P, last;
+
+// 	//Algoritma
+// 	if (!IsEmptyList(*L)) {
+// 		P = First(*L);
+// 		last = NIL;
+// 		while (next(P)!=First(*L)){
+// 			last = P;
+// 			P = next(P);
+// 		}
+// 		(*V) = info(P);
+// 		if (last==NIL){
+// 			CreateList(L);
+// 		}
+// 		else{
+// 			next(last)=First(*L);
+// 		}
+// 		Dealokasi(&P);
+// 	}
+// }
+
 void DeleteVLast (List3 *L, infotype *V){
 	//Kamus Lokal
 	address P, last;
@@ -148,16 +171,16 @@ void DeleteVLast (List3 *L, infotype *V){
 	if (!IsEmptyList(*L)) {
 		P = First(*L);
 		last = NIL;
-		while (next(P)!=First(*L)){
+		while (next(P) != First(*L)){
 			last = P;
 			P = next(P);
 		}
 		(*V) = info(P);
-		if (last==NIL){
+		if (last == NIL){
 			CreateList(L);
 		}
 		else{
-			next(last)=First(*L);
+			next(last)=  First(*L);
 		}
 		Dealokasi(&P);
 	}

@@ -63,8 +63,8 @@ int main()
 
     printf("Infotop Stack A = %c\n", infotop(A));
 
-    printf("\nApakah Stack A isEmptyStack = %d\n", isEmptyStack(A));
-	printf("Apakah Stack A isFullStack = %d\n", isFullStack(A));
+	printf("\nApakah Stack A isEmptyStack = %s\n", isEmptyStack(A) ? "Ya" : "Tidak");
+	printf("Apakah Stack A isFullStack = %s\n", isFullStack(A) ? "Ya" : "Tidak");
 
     printf("\nPush ke Stack A\n");
     push(&A,'b');

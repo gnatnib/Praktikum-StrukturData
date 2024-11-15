@@ -34,9 +34,16 @@ int main (){
     enqueue(&A, 'a');
     enqueue(&A, 'n');
     enqueue(&A, 'g');
+    enqueue(&A, 'a');
+    enqueue(&A, 'b');
+    enqueue(&A, 'c');
     viewQueue(A);
     printf("\n");
 
+    printf("Enqueue1 Queue A\n");
+    enqueue1(&A, 'P');
+    viewQueue(A);
+    
     printf("\nApakah Queue A Kosong: \n%s\n", (isEmptyQueue(A) ? "true" : "false\n"));
 
 	printf("Apakah Queue A Penuh: \n%s\n", (isFullQueue(A) ? "true" : "false\n"));

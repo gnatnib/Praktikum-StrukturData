@@ -54,7 +54,7 @@ int NbElm(List1 L);
 /* {I.S. - 
     F.S. P ter-alokasi 
 	Proses: Memesan ruang memori untuk address P} */
-void Alokasi (address *P);
+address Alokasi (address *P);
  
 /* procedure Dealokasi (P:address) */ 
 /* {I.S. P terdefinisi 

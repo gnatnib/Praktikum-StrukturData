@@ -9,7 +9,6 @@
 #define NIL NULL
 #define First(L) (L).First 
 #define info(P)  (P)->info
-#define prev(P)  (P)->prev 
 #define next(P)  (P)->next 
 
 /* typedef infotype = character */

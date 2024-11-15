@@ -13,7 +13,7 @@
 					head: integer ,
 					tail: integer >
 {cara akses: Q:tQueue, Q.head=head(Q) ...} */
-typedef struct { char wadah[6]; //indeks 0 tidak dipakai
+typedef struct { char wadah[11]; //indeks 0 tidak dipakai
                   int head; 
                   int tail; 
                 } tqueue;
@@ -84,6 +84,13 @@ void enqueue(tqueue *Q, char E);
 {proses: mengurangi elemen wadah Q, semua elemen di belakang head digeser maju }
 {bila awalnya 1 elemen, maka Head dan Tail menjadi 0 } */
 void dequeue(tqueue *Q, char *E);
+
+
+/* procedure enqueue1(input/output Q:queue, input e:character)
+{I.S.: Q dan e terdefinisi }
+{F.S.: Q bertambah 1 elemen atau penuh}
+{Proses: menambah elemen queue, jika Q penuh, elemen pertama/head dihapus} */
+void enqueue1(tqueue *Q, char e);
 
 /*tambahan, dikerjakan bila cukup waktu */
 

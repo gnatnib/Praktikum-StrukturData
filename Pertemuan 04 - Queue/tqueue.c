@@ -7,8 +7,8 @@ void createQueue (tqueue *Q){
     int i;
 
     /* Algoritma */
-    for (i = 1 ; i<=5 ; i++){
-        (*Q).wadah[i] = '$';
+    for (i = 1 ; i<=10 ; i++){
+        (*Q).wadah[i] = '-';
     }
     (*Q).head = 0;
     (*Q).tail = 0;
@@ -49,7 +49,7 @@ void printQueue (tqueue Q){
     /* Kamus Lokal */
     int i;
     /* Algoritma */
-    for (i = 1 ; i <= 5; i++){
+    for (i = 1 ; i <= 10; i++){
         printf ("  %c", (Q).wadah[i]);
     }
     printf("\n");
@@ -70,7 +70,7 @@ boolean isEmptyQueue(tqueue Q){
 }
 
 boolean isFullQueue(tqueue Q){
-    return tail(Q)==5;
+    return tail(Q)==10;
 }
 
 boolean isOneElement(tqueue Q){
@@ -83,14 +83,10 @@ void enqueue (tqueue *Q, char E){
     /* Algoritma */
     if (!isFullQueue(*Q)){
         if (isEmptyQueue(*Q)){
-            (*Q).wadah[(*Q).tail+1] = E;
-            (*Q).tail += 1;
             (*Q).head += 1;
         }
-        else{
-            (*Q).wadah[(*Q).tail+1] = E;
-            (*Q).tail += 1;
-        }
+        (*Q).wadah[(*Q).tail+1] = E;
+        (*Q).tail += 1;
     }
     else{
         printf("Queue Penuh ");
@@ -111,13 +107,33 @@ void dequeue(tqueue *Q, char *E){
             for (i=2 ; i<= (*Q).tail ; i++){
                 (*Q).wadah[i-1]= (*Q).wadah[i];
             }
-            (*Q).wadah[tail(*Q)] = '$';
+            (*Q).wadah[tail(*Q)] = '-';
             (*Q).tail -= 1;
         }
     }
     else{
         (*E) = ' ';
         printf ("Queue Kosong!");
+    }
+}
+
+void enqueue1(tqueue *Q, char E){
+    /* Kamus Lokal */
+    int i;
+
+    /* Algoritma */
+    if (!isFullQueue(*Q)){
+        if (isEmptyQueue(*Q)){
+            (*Q).head += 1;
+        }
+        (*Q).wadah[(*Q).tail+1] = E;
+        (*Q).tail += 1;
+    }
+    else{
+        for (i=1 ; i<= (*Q).tail ; i++){
+            (*Q).wadah[i] = (*Q).wadah[i+1];
+        }
+        (*Q).wadah[tail(*Q)] = E;
     }
 }
 
