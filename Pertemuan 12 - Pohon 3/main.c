@@ -9,6 +9,14 @@
 #include "pohon3.c"
 #include <stdio.h>
 
+void printVisitedStatus(bintree3 P) {
+    if (!IsEmptyTree(P)) {
+        printf("Node %c visited status: %s\n", info(P), visited(P) ? "true" : "false");
+        printVisitedStatus(left(P));
+        printVisitedStatus(right(P));
+    }
+}
+
 int main() {
     /* Kamus Main */
     bintree3 A, B, C, D, E, F, G, H, I;
@@ -29,9 +37,23 @@ int main() {
     H = Tree3(G, 'H', false, NIL, NIL);
     I = Tree3(G, 'I', false, NIL, NIL);
     left(G) = H; right(G) = I;
-
+    
     printf("A = ");
     PrintPrefix(A);
+
+    printf("\nTesting resetVisited:\n");
+    
+    visited(A) = true;
+    visited(C) = true;
+    visited(G) = true;
+    visited(I) = true;
+    
+    printf("Before resetVisited:\n");
+    printVisitedStatus(A);
+    
+    printf("\nAfter resetVisited:\n");
+    resetVisited(A);
+    printVisitedStatus(A);
 
     printf("\nCreateList(L):\n");
     CreateList(&L);

@@ -32,6 +32,12 @@ typedef struct tnode3
 /************************ PROTOTYPE ************************/
 /*OPERATOR ALOKASI*/
 /****************** Manajemen Memori ******************/
+
+/*procedure resetVisited( input/output P : bintree3 )
+{I.S: P terdefinisi; F.S: -}
+{proses mengubah status visited semua node di P menjadi false}*/
+void resetVisited (bintree3 P);
+
 /* procedure Alokasi (output P:bintree3) */ 
 /* {I.S. - 
     F.S. P ter-alokasi 

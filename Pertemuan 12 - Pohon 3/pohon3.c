@@ -37,6 +37,18 @@ bintree3 Tree3 (bintree3 A, infotype X, boolean V, bintree3 kiri, bintree3 kanan
     return P;
 }
 
+void resetVisited(bintree3 P){
+    //Kamus Lokal
+
+    //Algoritma
+    if(!IsEmptyTree(P)){
+        visited(P) = false;
+
+        resetVisited(left(P));
+        resetVisited(right(P));
+    }
+}
+
 boolean IsEmptyTree(bintree3 P){
     //Kamus Lokal
 
